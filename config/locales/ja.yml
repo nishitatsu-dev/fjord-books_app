@@ -1,0 +1,29 @@
+ja:
+  Books: "書籍一覧"
+  NewBook: "新規作成"
+  EditingBook: "編集"
+
+  activerecord:
+    attributes:
+      book:
+        title: タイトル
+        memo: メモ
+        author: 著者
+        picture: 写真
+
+  button:
+    Show: 詳細
+    Edit: 編集
+    Destroy: 削除
+    New Book: 新規作成
+    Back: 戻る
+
+  helpers:
+    submit:
+      create: "作成する"
+      update: "更新する"
+
+  notice:
+    create: "作成しました"
+    update: "更新しました"
+    destroy: "削除しました"
