@@ -30,8 +30,13 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  NewBook: "New Book"
-  EditingBook: "Editing Book"
+  books:
+    index:
+      books: "Books"
+    new:
+      new_book: "New Book"
+    edit:
+      editing_book: "Editing Book"
 
   notice:
     create: "Book was successfully created."

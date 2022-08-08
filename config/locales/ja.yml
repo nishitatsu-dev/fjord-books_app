@@ -1,7 +1,11 @@
 ja:
-  Books: "書籍一覧"
-  NewBook: "新規作成"
-  EditingBook: "編集"
+  books:
+    index:
+      books: "書籍一覧"
+    new:
+      new_book: "新規作成"
+    edit:
+      editing_book: "編集"
 
   activerecord:
     attributes:
