@@ -15,19 +15,19 @@ ja:
         author: 著者
         picture: 写真
 
-  button:
-    Show: 詳細
-    Edit: 編集
-    Destroy: 削除
-    New Book: 新規作成
-    Back: 戻る
-
   helpers:
     submit:
       create: "作成する"
       update: "更新する"
 
-  notice:
-    create: "作成しました"
-    update: "更新しました"
-    destroy: "削除しました"
+  common:
+    notice:
+      create: "作成しました"
+      update: "更新しました"
+      destroy: "削除しました"
+    button:
+      show: "詳細"
+      edit: "編集"
+      destroy: "削除"
+      new_book: "新規作成"
+      back: "戻る"

@@ -38,7 +38,14 @@ en:
     edit:
       editing_book: "Editing Book"
 
-  notice:
-    create: "Book was successfully created."
-    update: "Book was successfully updated."
-    destroy: "Book was successfully destroyed."
+  common:
+    notice:
+      create: "Book was successfully created."
+      update: "Book was successfully updated."
+      destroy: "Book was successfully destroyed."
+    button:
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      new_book: "New Book"
+      back: "Back"
