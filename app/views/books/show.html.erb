@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong><%= Book.human_attribute_name(:title) %>:</strong>
   <%= @book.title %>
@@ -13,6 +11,11 @@
 <p>
   <strong><%= Book.human_attribute_name(:author) %>:</strong>
   <%= @book.author %>
+</p>
+
+<p>
+  <strong><%= t('views.common.user_id') %>:</strong>
+  <%= @book.user_id %>
 </p>
 
 <p>

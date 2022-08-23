@@ -27,6 +27,11 @@
   </div>
 
   <div class="field">
+    <%= form.label t('views.common.user_id') %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
     <%= form.label :picture %>
     <%= form.file_field :picture %>
   </div>

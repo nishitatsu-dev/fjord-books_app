@@ -1,0 +1,21 @@
+<p>
+  <strong><%= User.human_attribute_name(:email) %>:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= t('views.common.zip_code') %>:</strong>
+  <%= @user.zip_code %>
+</p>
+
+<p>
+  <strong><%= t('views.common.address') %>:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong><%= t('views.common.self_bio') %>:</strong>
+  <%= @user.self_bio %>
+</p>
+
+<%= link_to t('views.common.back'), users_path %>
