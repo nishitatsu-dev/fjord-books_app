@@ -223,6 +223,14 @@ en:
       delete_confirm: "Are you sure?"
       title_new: "New %{name}"
       title_edit: "Editing %{name}"
+      books_list: "Books list"
+      users_list: "Users list"
+      profile_edit: Profile-editing
+      logout: Log-out
+      address: Address
+      self_bio: "Self bio"
+      user_id: "User ID"
+      zip_code: "Zip code"
   controllers:
     common:
       notice_create: "%{name} was successfully created."

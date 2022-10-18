@@ -1,0 +1,25 @@
+<h2><%= User.model_name.human %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= User.human_attribute_name(:id) %></th>
+      <th><%= User.human_attribute_name(:email) %></th>
+      <th><%= t('views.common.self_bio') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.self_bio %></td>
+        <td><%= link_to t('views.common.show'), user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @users %>
