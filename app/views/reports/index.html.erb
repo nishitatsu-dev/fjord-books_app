@@ -1,0 +1,33 @@
+<h1><%= Report.model_name.human %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= Report.human_attribute_name(:title) %></th>
+      <th><%= Report.human_attribute_name(:body) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.title %></td>
+        <td><%= report.body %></td>
+        <td><%= link_to t('views.common.show'), user_report_path(report.user_id, report) %></td>
+        <% if current_user.id == params[:user_id].to_i %>
+          <td><%= link_to t('views.common.edit'), edit_user_report_path(report.user_id, report) %></td>
+          <td><%= link_to t('views.common.destroy'), user_report_path(report.user_id, report), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if current_user.id == params[:user_id].to_i %>
+  <%= link_to t('views.common.new'), new_user_report_path %>
+  <br>
+<% end %>
+<%= link_to t('views.common.back'), users_path %>
