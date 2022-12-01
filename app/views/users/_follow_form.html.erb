@@ -1,6 +1,6 @@
 <% if current_user != @user %>
   <% if @user.followed_by?(current_user) %>
-    <%= form_with url: user_fans_path(@user.id), method: :delete, local: true do |f| %>
+    <%= form_with url: user_fan_path(@user.id), method: :delete, local: true do |f| %>
       <%= f.submit t('views.common.unfollow') %>
     <% end %>
   <% else %>
