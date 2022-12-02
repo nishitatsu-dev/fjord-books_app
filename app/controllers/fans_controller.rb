@@ -8,7 +8,7 @@ class FansController < ApplicationController
 
   def destroy
     follow = current_user.active_fans.find_by(follower_id: params[:user_id])
-    follow.destroy
+    follow&.destroy
     redirect_to user_path(params[:user_id])
   end
 end
