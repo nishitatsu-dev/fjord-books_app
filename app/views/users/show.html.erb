@@ -29,10 +29,17 @@
   <strong><%= User.human_attribute_name(:avatar) %>:</strong>
   <% if @user.avatar.attached? %>
     <br>
-    <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150])%>
+    <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]) %>
   <% end %>
 </p>
 
+<%= render 'follow_form' %>
+
+<%= link_to t('views.common.following'), follows_user_path %> :
+<%= @followings_count %> |
+<%= link_to t('views.common.follower'), followers_user_path %> :
+<%= @followers_count %>
+<br>
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
