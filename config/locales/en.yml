@@ -265,6 +265,10 @@ en:
       edit_comment: "Edit comment"
     form:
       new_comment: "New comment"
+  reports:
+    index:
+      user_index: "User index"
+      user_show: "User show"
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:

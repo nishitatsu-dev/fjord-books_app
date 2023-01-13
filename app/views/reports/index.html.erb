@@ -30,4 +30,5 @@
   <%= link_to t('views.common.new'), new_user_report_path %>
   <br>
 <% end %>
-<%= link_to t('views.common.back'), users_path %>
+<%= link_to t('.user_index'), users_path %> | 
+<%= link_to t('.user_show'), user_path(params[:user_id]) %>
