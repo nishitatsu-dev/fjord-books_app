@@ -20,6 +20,7 @@ ja:
       report:
         body: 内容
         title: タイトル
+        updated_at: 更新日時
       user:
         name: 氏名
         postal_code: 郵便番号

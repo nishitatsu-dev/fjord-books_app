@@ -19,6 +19,7 @@ en:
       report:
         body: Body
         title: Title
+        updated_at: "Updated at"
       user:
         name: Name
         postal_code: Postal code

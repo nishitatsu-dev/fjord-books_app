@@ -257,10 +257,6 @@ ja:
       edit_comment: コメント編集
     form:
       new_comment: 新規コメント
-  reports:
-    index:
-      user_index: ユーザ一覧
-      user_show: ユーザ詳細
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:

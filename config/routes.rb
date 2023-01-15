@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     resources :comments, module: :books
   end
   resources :users, only: %i[index show] do
-    resources :reports
     resource :relationships, only: %i[create destroy]
     scope module: :users do
       resources :followings, only: [:index]

@@ -24,7 +24,6 @@
         <td><%= user.postal_code %></td>
         <td><%= user.address %></td>
         <td><%= link_to t('views.common.show'), user %></td>
-        <td><%= link_to Report.model_name.human, user_reports_path(user.id) %></td>
       </tr>
     <% end %>
     </tbody>
