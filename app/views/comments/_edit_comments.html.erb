@@ -11,17 +11,17 @@
   </thead>
 
   <tbody>
-    <% commentable.comments.each do |comment| %>
+    <% commentable.comments.eager_load(:user).find_each do |comment| %>
       <tr>
         <% if comment == @comment %>
           <td><%= t('.editing') %></td>
         <% else %>
           <td><%= comment.comment %></td>
           <td><%= l(comment.updated_at) %></td>
-          <% unless User.find(comment.user_id).name == '' %>
-            <td><%= User.find(comment.user_id).name %></td>
+          <% unless comment.user.name == '' %>
+            <td><%= comment.user.name %></td>
           <% else %>
-            <td><%= User.find(comment.user_id).email %></td>
+            <td><%= comment.user.email %></td>
           <% end %>
         <% end %>
       </tr>
