@@ -25,8 +25,4 @@ class ApplicationController < ActionController::Base
   def signed_in_root_path(_resource_or_scope)
     user_path(current_user)
   end
-
-  def current_user_id?(user_id)
-    current_user.id == user_id
-  end
 end

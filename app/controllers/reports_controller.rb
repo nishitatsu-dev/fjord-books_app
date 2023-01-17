@@ -18,7 +18,7 @@ class ReportsController < ApplicationController
 
   # GET /reports/1/edit
   def edit
-    redirect_to root_path unless current_user_id?(@report.user_id)
+    redirect_to root_path unless current_user.id == @report.user_id
   end
 
   # POST /reports or /reports.json
@@ -34,7 +34,7 @@ class ReportsController < ApplicationController
 
   # PATCH/PUT /reports/1 or /reports/1.json
   def update
-    redirect_to root_path and return unless current_user_id?(@report.user_id)
+    return redirect_to root_path unless current_user.id == @report.user_id
 
     if @report.update(report_params)
       redirect_to reports_url, notice: 'Report was successfully updated.'
@@ -45,12 +45,10 @@ class ReportsController < ApplicationController
 
   # DELETE /reports/1 or /reports/1.json
   def destroy
-    if current_user_id?(@report.user_id)
-      @report.destroy
-      redirect_to reports_url, notice: 'Report was successfully destroyed.'
-    else
-      redirect_to root_path
-    end
+    return redirect_to root_path unless current_user.id == @report.user_id
+
+    @report.destroy
+    redirect_to reports_url, notice: 'Report was successfully destroyed.'
   end
 
   private

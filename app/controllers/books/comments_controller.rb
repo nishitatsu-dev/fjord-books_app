@@ -5,7 +5,8 @@ class Books::CommentsController < CommentsController
   before_action :set_comment, only: %i[edit update]
 
   def edit
-    redirect_to root_path unless current_user_id?(@comment.user_id)
+    return redirect_to root_path unless current_user.id == @comment.user_id
+
     @book = @commentable
     render 'books/show'
   end
@@ -20,7 +21,7 @@ class Books::CommentsController < CommentsController
   end
 
   def update
-    return redirect_to root_path unless current_user_id?(@comment.user_id)
+    return redirect_to root_path unless current_user.id == @comment.user_id
 
     if @comment.update(comment_params)
       redirect_to @commentable, notice: 'Comment was successfully updated.'
