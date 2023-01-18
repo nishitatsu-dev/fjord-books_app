@@ -250,6 +250,13 @@ ja:
       notice: "フォローしました。"
     destroy:
       notice: "フォロー解除しました。"
+  comments:
+    edit_comments:
+      editing: "（下で編集中）"
+    edit_form:
+      edit_comment: コメント編集
+    form:
+      new_comment: 新規コメント
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:

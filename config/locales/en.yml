@@ -258,6 +258,13 @@ en:
       notice: "Successfully followed."
     destroy:
       notice: "Successfully unfollowed."
+  comments:
+    edit_comments:
+      editing: "(This comment is edited below)"
+    edit_form:
+      edit_comment: "Edit comment"
+    form:
+      new_comment: "New comment"
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:

@@ -1,0 +1,13 @@
+<%= form_with(model: [commentable, Comment.new], local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :comment, t('.new_comment') %>
+    <%= form.text_area :comment, required: true, maxrength: "200" %>
+  </div>
+
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
