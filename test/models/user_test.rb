@@ -4,8 +4,6 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   setup do
-    @me = User.create!(email: 'me@example.com', password: 'password')
-    @she = User.create!(email: 'she@example.com', password: 'password')
     @alice = users(:alice)
     @bob = users(:bob)
   end
@@ -19,16 +17,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test '他ユーザをフォローする__follow' do
-    assert_not @me.following?(@she)
-    @me.follow(@she)
-    assert @me.following?(@she)
+    @bob.follow(@alice)
+    assert @bob.following?(@alice)
   end
 
   test '他ユーザをフォロー解除する__unfollow' do
-    @me.follow(@she)
-    assert @me.following?(@she)
-    @me.unfollow(@she)
-    assert_not @me.following?(@she)
+    @alice.unfollow(@bob)
+    assert_not @alice.following?(@bob)
   end
 
   test 'あるユーザをフォローしている状態か確認__following?' do
